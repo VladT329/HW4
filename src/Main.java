@@ -28,14 +28,59 @@ public class Main {
         int year = 1584;
         int userYear = 1984;
         int difference = userYear - year;
-        if (difference % 4 == 0) {
+        if (difference % 4 == 0 && userYear > 1584) {
             if (difference % 100 == 0 && difference % 400 == 0) {
-                System.out.println("Високосный");
+                System.out.println(userYear + " год является високосным");
             } else if (difference % 100 != 0) {
-                System.out.println("Високосный");
+                System.out.println(userYear + " год является високосным");
             }
         } else {
-            System.out.println("Не является високосным");
+            System.out.println(userYear + " год не является високосным");
+        }
+        System.out.println();
+
+        System.out.println("Задание 4");
+        int deliveryDistance = 95;
+        if (deliveryDistance < 100){
+            if (deliveryDistance < 20){
+                System.out.println("Потребуется дней: 1");
+            }
+            if (deliveryDistance >= 20 && deliveryDistance < 60){
+                System.out.println("Потребуется дней: 2");
+            }
+            if (deliveryDistance >= 60 && deliveryDistance < 100){
+                System.out.println("Потребуется дней: 3");
+            }
+        } else if (deliveryDistance > 100){
+            System.out.println("Доставки нет");
+        }
+        System.out.println();
+
+        System.out.println("Задание 5");
+        int monthNumber = 5;
+        switch (monthNumber){
+            case 12:
+            case 1:
+            case 2:
+                System.out.println(monthNumber + " месяц принадлежит к сезону: зима");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println(monthNumber + " месяц принадлежит к сезону: весна");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println(monthNumber + " месяц принадлежит к сезону: лето");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println(monthNumber + " месяц принадлежит к сезону: осень");
+                break;
+            default:
+                System.out.println("Месяца " + monthNumber + " не существует");
         }
     }
 }
