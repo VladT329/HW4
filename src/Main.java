@@ -17,7 +17,7 @@ public class Main {
         } else if (clientDeviceYear >= 2015 && clientOS == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
-        if (clientDeviceYear < 2015 && clientOS == 0) {
+        else if (clientDeviceYear < 2015 && clientOS == 0) {
             System.out.println("Установите облегчнную версию приложения для IOS по ссылке");
         } else if (clientDeviceYear < 2015 && clientOS == 1) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
@@ -25,19 +25,12 @@ public class Main {
         System.out.println();
 
         System.out.println("Задание 3");
-        int year = 1584;
-        int userYear = 1984;
-        int difference = userYear - year;
-        if (difference % 4 == 0 && userYear > 1584) {
-            if (difference % 100 == 0 && difference % 400 == 0) {
-                System.out.println(userYear + " год является високосным");
-            } else if (difference % 100 != 0) {
-                System.out.println(userYear + " год является високосным");
-            }
+        int year = 1700;
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+            System.out.println("Год " + year + " является високосным");
         } else {
-            System.out.println(userYear + " год не является високосным");
-        }
-        System.out.println();
+        System.out.println("Год " + year + " не является високосным");
+            System.out.println();
 
         System.out.println("Задание 4");
         int deliveryDistance = 95;
@@ -48,10 +41,10 @@ public class Main {
             if (deliveryDistance >= 20 && deliveryDistance < 60){
                 System.out.println("Потребуется дней: 2");
             }
-            if (deliveryDistance >= 60 && deliveryDistance < 100){
+            if (deliveryDistance >= 60){
                 System.out.println("Потребуется дней: 3");
             }
-        } else if (deliveryDistance > 100){
+        } else {
             System.out.println("Доставки нет");
         }
         System.out.println();
@@ -83,4 +76,5 @@ public class Main {
                 System.out.println("Месяца " + monthNumber + " не существует");
         }
     }
+}
 }
